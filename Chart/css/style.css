@@ -1,0 +1,218 @@
+
+.box{ 
+    background-color:#fff;
+}
+.nav{
+    height: 80px;
+    margin: 0px auto;
+    background-color: #C0C0C0;  
+    width: 1135px;
+    -webkit-box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+    -ms-box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+    -o-box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+/*为nav清除浮动*/
+.nav：after{
+    clear: both;
+    display: block;
+    overflow: hidden;
+    content: "";
+}
+.nav .item{
+    height: 80px;
+    float: left;
+    perspective: 4000px;
+}
+.first{
+    
+}
+.other{
+    margin-right: 3px;
+}
+.last{
+    margin-right: 0px;
+}
+.nav .item a{
+    display: block;
+    height: 80px;
+    text-decoration: none;
+    transition: all .5s;
+    transform-style: preserve-3d;
+}
+.nav .item a p{
+    height: 80px;
+    padding: 0 15px;
+    margin: 0px;
+    line-height: 80px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Microsoft Yahei";0
+    border-radius: 2px;
+    transition: all .5s;
+}
+/*导航 系统*/
+.nav .item span{
+    display: block;
+    height: 80px;
+    text-decoration: none;
+    transition: all .5s;
+    transform-style: preserve-3d;
+}
+.nav .item span .f1{
+    background-color: #688296;
+    transform: translateZ(40px);
+    height: 80px;
+    padding: 0 15px;
+    margin: 0px;
+    line-height: 80px; 
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Microsoft Yahei";
+    border-radius: 2px;
+    transition: all .5s;
+}
+/* 当前页面 */
+.nav .item span .f2{
+    background-color: #606060;
+    transform: translateZ(40px);
+    height: 80px;
+    padding: 0 15px;
+    margin: 0px;
+    line-height: 40px; 
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Microsoft Yahei";0
+    border-radius: 2px;
+    transition: all .5s;
+}
+.nav .item a p:first-child{
+    background-color: #688296;
+    transform: translateZ(40px);
+}
+.nav .item a p:last-child{
+    background-color: #606060;
+    transform: translateZ(20px) rotateX(-90deg) ;
+    margin-top: -40px;
+}
+.nav .item a:hover{
+    transform: rotateX(90deg);
+}
+.nav .item a:hover p:last-child{
+    margin-top: 0px;
+    transform: translateZ(0) rotateX(-90deg);
+}
+/*chart*/
+#ChartTID{
+    width: 900px;
+    height: 400px;
+    margin: 0 auto;
+    border: 10px solid #7F7F7F;
+    border-radius: 10px;
+
+    padding: 20px;
+    background: #fff;
+    margin-right: 60px;
+
+}
+#ChartIT{
+    width: 900px;
+    height: 400px;
+    margin: 0 auto;
+    border: 10px solid #7F7F7F;
+    border-radius: 10px;
+    padding: 20px;
+    background: #fff;
+    margin-right: 60px;
+}
+.main{
+    width: 100%;
+    margin: 0 auto;
+    color: #000;
+}
+.wit{
+  background: #D8D8D8;
+}
+.wits{
+  background: #6C8192;
+}
+.main>p{
+    font-size: 24px;
+    text-align: center;
+    margin:50px auto;
+}
+.froms{
+  display: flex;
+  padding: 60px 0;
+  width: 1500px;
+  margin: 0 auto;
+}
+.froms p{
+  width: 500px;
+  font-size: 24px;
+  text-align: center;
+  padding-right: 60px; 
+  padding-top: 50px;
+}
+/* footer */
+.box .footer{
+  margin: 0 auto;
+  color: #000;
+  overflow: hidden;
+  background: #fff;
+}
+.logo,.from,.call,.follow{
+  float: left;
+  margin-bottom: 40px;
+  padding:5px 15px;
+}
+.follow{
+  text-align: center;
+  font-size: 32px;
+}
+.logo{
+  margin-left:400px;
+  text-align: center;
+}
+.from,.call,.follow{
+   margin-left: 210px;
+}
+.from li >a{
+  text-decoration: none;
+  color: #5255F2;
+}
+.box .footer .line{
+  border: 0.5px solid #fff;
+  margin-top: 40px;
+  clear: both;
+}
+.from li:first-child,.call li:first-child,.follow li:first-child{
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.from li,.call li,.follow li{
+  height: 30px;
+  line-height: 30px;
+}
+.diudiudiu{
+  text-align: center;
+  position: relative;
+}
+.diudiudiu>a{
+  display: block;
+  text-decoration: none;
+  color: #5255F2;
+}
+.diudiudiu>span{
+  display: block;
+}
+.follow ul li a{
+  text-decoration: none;
+  color: #fff;
+}

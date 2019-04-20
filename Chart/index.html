@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试数据比对</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/public-clear.css">
+    <link rel="stylesheet" type="text/css" href="../css/icon.css">
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/highcharts.js"></script>
+</head>
+<body>
+    <div class="box">
+      <div class="nav">
+        <div class="item other">
+          <span>
+            <div class="f1">图像模糊度评价系统</div>
+          </span>
+        </div>
+        <div class="item other">
+          <a href="../index.html">
+            <p>主页</p>
+            <p>Home</p>
+          </a>
+          </div>
+        <div class="item other">
+          <a href="../System/index.html">
+            <p>在线系统</p>
+            <p>Online system</p>
+          </a>
+          </div>
+          <div class="item other">
+            <a href="../Database/index.html">
+              <p>图像数据库</p>
+              <p>Image database</p>
+            </a>
+          </div>
+          <div class="item other">
+            <span>
+               <div class="f2">测试数据比对<br>Test data comparison</div>
+            </span>
+          </div>
+          <div class="item other">
+              <a href="../Algorithm/index.html">
+                  <p>算法</p>
+                  <p>Algorithm</p>
+              </a>
+          </div>
+          <div class="item other">
+              <a href="../Reference/index.html">
+                  <p>相关文献</p>
+                  <p>Related literature</p>
+              </a>
+          </div>
+          <div class="item last">
+              <a href="../download/IQA_boxed.exe" download>
+                  <p>下载</p>
+                  <p>Download</p>
+              </a>
+          </div>
+      </div>
+      <div class="main">
+        <p>经过一下两图的数据，可以证明基于边缘检测方法在针对智能交通方面图像的效果较为完善。</p>
+        <div class="wit">
+          <div class="froms">
+            <p>数据来源：该数据是三种图像模糊度算法对TID2013的图像进行评价与原图像失真等级的差异数据。结果表明基于边缘检测方法正确率高达95.1%，该方法针对该图像集效率较高。基于能量分布方法正确率为87.2%，基于像素信号量方法正确率为88.3%。</p>
+            <div id="ChartTID"></div>
+          
+
+          </div>
+        </div>
+        
+        <div class="wits">
+          <div class="froms">
+          <div id="ChartIT"></div>
+          <p>数据来源：该数据是三种图像模糊度算法对智能交通的图像进行评价与原图像失真等级的差异数据。结果表明基于边缘检测方法正确率高达92.1%，基于能量分布方法正确率为84.5%，基于像素信号量方法正确率为82.8%。</p>
+           
+        </div>
+       </div>
+        </div>
+        
+      
+      <div class="footer">
+        <div class="logo">
+          <img src="../images/logo.png" style="width: 60px; height:60px;">
+          <br />
+          <span>图像模糊度评价</span>
+        </div>
+        <div class="from">
+          <ul>
+            <li>来源</li>
+            <li>文献：<a href="">中国知网</a></li>
+            <li>数据库：<a href=""></a></li>
+          </ul>
+        </div>
+        <div class="call">
+          <ul>
+            <li>联系我们</li>
+            <li>QQ:</li>
+            <li>VX:</li>
+          </ul>
+        </div>
+        <div class="follow">
+          <ul>
+            <li>关注</li>
+            <li><a href="https://github.com/diudiudiu"><i class="icon-github"></i></a></li>
+          </ul>
+        </div>
+        <div class="line"></div>
+        <div class="diudiudiu">
+          copyright © 2018 The Project by 
+          <a href="https://github.com/diudiudiu">diudiudiu</a>
+          <span>All Rights Reserved</span>
+        </div>
+      </div>
+    </div>
+
+
+
+<script language="JavaScript">
+$(document).ready(function() {
+   var titleTID = {
+      text: '图像模糊度评价三种方法针对TID2013图像集实验数据对比'   
+   };
+   var subtitleTID = {
+      text: ''
+   };
+   var xAxisTID = {
+      categories: []
+   };
+   var yAxisTID = {
+      title: {
+         text: '误差'
+      },
+      plotLines: [{
+         value: 0,
+         width: 1,
+         color: '#808080'
+      }]
+   };   
+
+   var tooltipTID = {
+      valueSuffix: ''
+   }
+
+   var legendTID = {
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'middle',
+      borderWidth: 0
+   };
+
+   var seriesTID =  [
+      {
+         name: '基于边缘检测',
+         data: [3, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,0,1, 0, 1, 0,1, 0, 0, 0,1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,0,1, 0, 1, 0,1, 0, 0, 0,1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0,1, 0, 1, 0,1, 0, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0,1, 0, 1, 0,1, 0, 0, 0,1, 0, 0, 0, 0]
+
+      }, 
+      {
+         name: '基于能量分布',
+         data: [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,0,1, 0, 1, 0,1, 0, 0, 0,1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,0,1, 0, 1, 0,1, 0, 0, 0,1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,0,1, 0, 1, 0,1, 0, 0, 0,1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,0,1, 0, 1, 0,1, 0, 0, 0,1, 0, 0, 0,]
+      },
+      {
+         name: '基于像素信号量',
+         data: [ 0,0,1, 0, 1, 0,1, 0, 0, 0,1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,0,1, 0, 1, 0,1, 0, ]
+      }
+   ];
+
+
+    var titleIT = {
+      text: '图像模糊度评价三种方法针对智能交通图像实验数据对比'   
+   };
+   var subtitleIT = {
+      text: ''
+   };
+   var xAxisIT = {
+      categories: []
+   };
+   var yAxisIT = {
+      title: {
+         text: '误差'
+      },
+      plotLines: [{
+         value: 0,
+         width: 1,
+         color: '#808080'
+      }]
+   };   
+
+   var tooltipIT = {
+      valueSuffix: ''
+   }
+
+   var legendIT = {
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'middle',
+      borderWidth: 0
+   };
+
+   var seriesIT =  [
+      {
+         name: '基于边缘检测',
+         data: [3, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0,1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,0,1, 0, 1, 0,1, 0, 0, 0,1, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,0,1, 0, 1, 0,1, 0, 0, 0,1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,0,1, 0, 0, 0, 0, 1, 0, 0, 0, 0,0, 1,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0, 0,1, 0, 0, 0,1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,0,1, 0, 1, 0,1, 0, 0, 0,-1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,0,1, 0, 1, 0,1, 0, 0, 0,1, 0, 0, 0, 0]
+      }, 
+      {
+         name: '基于能量分布',
+         data: [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,0,1, 0, 1, 0,1, 0, 0, 0,1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,0,1, 0, 1,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0, 0,1, 0, 0, 0,1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,0,1, 0, 1, 0,1, 0, 0, 0,1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,0,1, 0, 1, 0,1, 0, 0, 0,1, 0, 0, 0,]
+      },
+      {
+         name: '基于像素信号量',
+         data: [ 0,0,1, 0, 1, 0,1, 0, 0, 0,1,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0,0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,0,1, 0, 1, 0,1, 0, ]
+      }
+   ];
+   var jsonTID = {};
+   var jsonIT= {}
+   jsonTID.title = titleTID;
+   jsonTID.subtitle = subtitleTID;
+   jsonTID.xAxis = xAxisTID;
+   jsonTID.yAxis = yAxisTID;
+   jsonTID.tooltip = tooltipTID;
+   jsonTID.legend = legendTID;
+   jsonTID.series = seriesTID;
+
+   jsonIT.title = titleIT;
+   jsonIT.subtitle = subtitleIT;
+   jsonIT.xAxis = xAxisIT;
+   jsonIT.yAxis = yAxisIT;
+   jsonIT.tooltip = tooltipIT;
+   jsonIT.legend = legendIT;
+   jsonIT.series = seriesIT;
+   $('#ChartTID').highcharts(jsonTID);
+   $('#ChartIT').highcharts(jsonIT);
+});
+</script>
+</body>
+</html>

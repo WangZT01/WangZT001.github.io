@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Home</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<!-- Bootstrap CSS-->
+<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+<!-- Google fonts-->
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/icon.css"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+<!-- Lightbox-->
+<link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css">
+<!-- theme stylesheet-->
+<link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+<!-- Custom stylesheet - for your changes-->
+<link rel="stylesheet" href="css/custom.css">
+<!-- Leaflet CSS - For the map-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
+<!-- Favicon-->
+<link rel="shortcut icon" href="favicon.png">
+
+</head>
+<body>
+<header class="header sticky-top">
+  <nav class="navbar navbar-expand-lg bg-white border-bottom py-0">
+	<div class="container"><a href="#" class="navbar-brand py-1"><img src="images/logo.png" style="width: 50px;height: 50px;" alt="" class="img-fluid"><span> No work Team</span></a>
+	  <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span class="fas fa-bars"></span></button>
+	  <div id="navbarSupportedContent" class="collapse navbar-collapse">
+		<ul class="navbar-nav ml-auto px-3">
+		  <li class="nav-item active"><a href="System/index.html" class="nav-link text-uppercase link-scroll">在线系统</a></li>
+		  <li class="nav-item"><a href="#about" class="nav-link text-uppercase link-scroll">关于我们</a></li>
+		  <li class="nav-item"><a href="#services" class="nav-link text-uppercase link-scroll">展示</a></li>
+		  <li class="nav-item"><a href="#portfolio" class="nav-link text-uppercase link-scroll">图像数据库</a></li>
+		  <li class="nav-item"><a href="#text" class="nav-link text-uppercase link-scroll">IQA</a></li>
+		  <li class="nav-item"><a href="Reference/index.html" class="nav-link text-uppercase link-scroll">相关文献</a></li>
+		  <li class="nav-item"><a href="download/IQA_boxed.exe" download class="nav-link text-uppercase link-scroll">下载</a></li>
+		</ul>
+	  </div>
+	</div>
+  </nav>
+</header>
+<!-- About Section-->
+<section id="about" class="about">
+  <div class="container">
+	<div class="row mb-5">
+	  <div class="col-lg-6">
+		<header class="text-center mb-5">
+		  <h2 class="lined text-uppercase">关于我们</h2>
+		</header>
+		<p class="lead">基于交通监控的图像模糊度评价系统</p>
+		<p>在如今道路复杂车流量巨大，智能交通可以依据图像模糊度评价进行判断拥堵环境，从而使交警快速地疏通道路。在车牌模糊方面，智能交通将模糊车牌与清晰车牌分类，再将模糊车牌复原，从而达到使智能交通系统更加快速，更加人性化。交通图像模糊原因主要有以下方面：</p>
+		<div class="row">
+		  <div class="col-lg-6">
+			<ul class="mb-0">
+			  <li>物体运动</li>
+			  <li>光源影响</li>
+			</ul>
+		  </div>
+		  <div class="col-lg-6">
+			<ul class="mb-0">
+			  <li>拍摄失焦</li>
+			  <li>天气</li>
+			</ul>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-lg-6"><img src="images/客户端.png" alt="..." class="img-fluid" style="width: 400px;height: 300px;"></div>
+	</div>
+	<div class="row">   
+	  <div class="col-lg-6"> 
+		<h5 class="text-uppercase font-weight-bold"><i class="fas fa-arrows-alt mr-2"> </i>论文发表</h5>
+		<p>图像模糊度评价及其应用综述</p>
+		<p>Analysis and application of No-reference Image Quality Assessment</p>
+	  </div>
+	  <div class="col-lg-6"> 
+		<h5 class="text-uppercase font-weight-bold"><i class="far fa-image mr-2"> </i>数据库</h5>
+		<p>自制数据库</p>
+		<p>交通监控图像</p>
+	  </div>
+	  <div class="col-lg-6"> 
+		<h5 class="text-uppercase font-weight-bold"><i class="far fa-life-ring mr-2"> </i>系统</h5>
+		<p>在线系统</p>
+		<p>线下系统</p>
+	  </div>
+	  <div class="col-lg-6"> 
+		<h5 class="text-uppercase font-weight-bold"><i class="fas fa-trophy mr-2"> </i>奖项获取</h5>
+		<p>学家奥杯二等奖</p>
+	  </div>
+	</div>
+  </div>
+</section>
+<!-- Services Section-->
+<section id="services" class="bg-gray">
+  <div class="container">
+	<header class="text-center mb-5">
+	  <h2 class="lined text-uppercase">功能&展示</h2>
+	</header>
+	<div class="row text-center">
+	  <div class="col-lg-4">
+		<div class="bg-white mb-4 p-4">
+		  <div class="icon mb-3"><i class="fas fa-desktop"></i></div>
+		  <h4 class="text-uppercase font-weight-bold"><a href="System/index.html">图像在线评价</a></h4>
+		  <p class="small text-gray">可在线进行图像模糊度等级判定</p>
+		</div>
+	  </div>
+	  <div class="col-lg-4">
+		<div class="bg-white mb-4 p-4">
+		  <div class="icon mb-3"><i class="icon-images" style="font-size: 22px;"></i></div>
+		  <h4 class="text-uppercase font-weight-bold"><a href="Database/index.html">图像数据库</a></h4>
+		  <p class="small text-gray">交通监控图像和自制数据库</p>
+		</div>
+	  </div>
+	  <div class="col-lg-4">
+		<div class="bg-white mb-4 p-4">
+		  <div class="icon mb-3"><i class="icon-sphere" style="font-size: 22px;"></i></div>
+		  <h4 class="text-uppercase font-weight-bold"><a href="Algorithm/index.html">算法</a></h4>
+		  <p class="small text-gray">针对基于边缘检测、像素信号量、能量分布方法</p>
+		</div>
+	  </div>
+	  <div class="col-lg-4">
+		<div class="bg-white mb-4 p-4">
+		  <div class="icon mb-3"><i class="icon-stats-dots" style="font-size: 22px;"></i></div>
+		  <h4 class="text-uppercase font-weight-bold"><a href="Chart/index.html">测试数据对比</a></h4>
+		  <p class="small text-gray">三种算法对交通监控图像进行测试</p>
+		</div>
+	  </div>
+	  <div class="col-lg-4">
+		<div class="bg-white mb-4 p-4">
+		  <div class="icon mb-3"><i class="icon-books" style="font-size: 22px;"></i></div>
+		  <h4 class="text-uppercase font-weight-bold"><a href="Reference/index.html">相关文献</a></h4>
+		  <p class="small text-gray">有关图像模糊度评价的文献</p>
+		</div>
+	  </div>
+	  <div class="col-lg-4">
+		<div class="bg-white mb-4 p-4">
+		  <div class="icon mb-3"><i class="icon-download2" style="font-size: 22px;"></i></div>
+		  <h4 class="text-uppercase font-weight-bold"><a href="download/IQA_boxed.exe" download>下载 </a></h4>
+		  <p class="small text-gray">下载系统至本地</p>
+		</div>
+	  </div>
+	</div>
+  </div>
+</section>
+<!-- Portfolio Section-->
+<section id="portfolio" class="pb-0">
+  <header class="text-center mb-4">
+	<h2 class="lined text-uppercase mb-5"><a href="Database/index.html" title="查看完整数据" style="color: #000;">图像数据库</a></h2>
+	<p>数据库中部分图像的展示，包含交通监控和自制数据库的图像</p>
+  </header>
+  <div class="row p-0">           
+	<div class="col-lg-3 col-md-4 col-6 p-0"><a href="images/dataIMG/show1.jpg" data-lightbox="image-1" style="width: 100%;height: 100%" data-title="交通监控图像" class="d-block"><img style="width: 100%;height: 100%" src="images/dataIMG/show1.jpg" alt="..." class="img-fluid d-block mx-auto"></a></div>
+	<div class="col-lg-3 col-md-4 col-6 p-0"><a href="images/dataIMG/show2.jpg" data-lightbox="image-1" style="width: 100%;height: 100%" data-title="交通监控图像" class="d-block"><img style="width: 100%;height: 100%" src="images/dataIMG/show2.jpg" alt="..." class="img-fluid d-block mx-auto"></a></div>
+	<div class="col-lg-3 col-md-4 col-6 p-0"><a href="images/dataIMG/show3.jpg" data-lightbox="image-1" style="width: 100%;height: 100%" data-title="交通监控图像" class="d-block"><img style="width: 100%;height: 100%" src="images/dataIMG/show3.jpg" alt="..." class="img-fluid d-block mx-auto"></a></div>
+	<div class="col-lg-3 col-md-4 col-6 p-0"><a href="images/dataIMG/show4.jpg" data-lightbox="image-1" style="width: 100%;height: 100%" data-title="自制数据库图像" class="d-block"><img style="width: 100%;height: 100%" src="images/dataIMG/show4.jpg" alt="..." class="img-fluid d-block mx-auto"></a></div>
+	<div class="col-lg-3 col-md-4 col-6 p-0"><a href="images/dataIMG/show5.jpg" data-lightbox="image-1" style="width: 100%;height: 100%" data-title="自制数据库图像" class="d-block"><img style="width: 100%;height: 100%" src="images/dataIMG/show5.jpg" alt="..." class="img-fluid d-block mx-auto"></a></div>
+	<div class="col-lg-3 col-md-4 col-6 p-0"><a href="images/dataIMG/show6.jpg" data-lightbox="image-1" style="width: 100%;height: 100%" data-title="自制数据库图像" class="d-block"><img style="width: 100%;height: 100%" src="images/dataIMG/show6.jpg" alt="..." class="img-fluid d-block mx-auto"></a></div>
+	<div class="col-lg-3 col-md-4 col-6 p-0"><a href="images/dataIMG/show7.jpg" data-lightbox="image-1" style="width: 100%;height: 100%" data-title="自制数据库图像" class="d-block"><img style="width: 100%;height: 100%" src="images/dataIMG/show7.jpg" alt="..." class="img-fluid d-block mx-auto"></a></div>
+	<div class="col-lg-3 col-md-4 col-6 p-0"><a href="images/dataIMG/show8.bmp" data-lightbox="image-1" style="width: 100%;height: 100%" data-title="公开数据集" class="d-block"><img style="width: 100%;height: 100%" src="images/dataIMG/show8.bmp" alt="..." class="img-fluid d-block mx-auto"></a></div>
+  </div>
+</section>
+<!-- Text Section-->
+<section id="text" class="bg-gray">
+  <div class="container">
+	<header class="text-center mb-5">
+	  <h2 class="lined text-uppercase">图像模糊度应用</h2>
+	</header>
+	<div class="row">
+	  <div class="col-lg-6">
+		<p>图像模糊度评价广泛地应用于导弹成像制导等光防军用领域、目标侦察等国防军用领域及医学检测、安全监控、智能交通等民用领域。
+
+
+
+</p>
+	  </div>
+	  <div class="col-lg-6">
+		<p>例如在医学中图像模糊度可以评价骨龄。依靠医生的视觉和经验阅读X线片评定骨龄，具有主观性，评价结果存在认为误差，且效率较低。运用计算机自动评价骨龄会对手腕骨的图像质量进行分析会更加准确。计算机处理不依靠主观指标来判断图像的质量。在计算机评定过程中,采用模糊数学模型中的模糊度来定量分析图像的品质。</p>
+	  </div>
+	  <div class="col-lg-6">
+		<p>在公安监控方面由于天气，光照等多种原因导致拍摄图像（视频）模糊，导致警方无法根据图像（视频）获取资源，这时需要用到图像模糊度评价来对视频的某一时刻或某一段时刻进行选取并还原到清晰图像。</p>
+	  </div>
+	  <div class="col-lg-6">
+		<p>本系统分为两大部分，线上部分和本地部分，线上部分为Web端，用户可登陆网页获取相关信息或资源，本地部分由C++语言编写的客户端系统，实现本地无网络情况下运行。</p>
+	  </div>
+	</div>
+  </div>
+</section>
+
+
+
+<footer class="py-4">
+  <div class="container">
+	<div class="row">
+	  <div class="col-lg-6 text-center text-lg-left">
+		<p class="mb-0 text-gray">Copyright &copy; 2019.Company name All rights reserved.&#x7F51;&#x9875;&#x6A21;&#x677F;</p>
+	  </div>
+	  <div class="col-lg-6 text-center text-lg-right">
+		<p class="mb-0 text-gray"></p>
+	  </div>
+	</div>
+  </div>
+</footer>
+<!-- JavaScript files-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/lightbox2/js/lightbox.min.js"></script>
+<script src="vendor/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
+<script src="js/leaflet.js"> </script>
+<script src="js/front.js"></script>
+<!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+</body>
+</html>
